@@ -16,7 +16,6 @@ def img_sort(imgs_dir,**kwargs):
         if (Path.cwd() / value).is_dir(): continue
         else: os.mkdir(value)
 
-
     print('''A new window has opened to display your images, you may need to focus it.
 Press any of '''+keys+''' to sort, spacebar to leave current image in the current working directory, or Esc to break''')
     for path in imgs_dir.glob('*'):
