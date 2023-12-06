@@ -17,7 +17,7 @@ def img_sort(imgs_dir,**kwargs):
         else: os.mkdir(value)
 
     print('''A new window has opened to display your images, you may need to focus it.
-Press any of '''+keys+''' to sort, spacebar to leave current image in the current working directory, or Esc to break''')
+Press any of ['''+keys+'''] to sort, spacebar to leave current image in the current working directory, or Esc to break''')
     for path in imgs_dir.glob('*'):
         if path.suffix not in extensions: continue
         print(path)
