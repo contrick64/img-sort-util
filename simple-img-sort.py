@@ -26,7 +26,7 @@ def img_sort(imgs_dir,**kwargs):
             elif k == 27:
                 break
             else:
-                print("please enter j or k : "+kstr)
+                print("You typed "+kstr+". please use one of your predefined shortcut keys.")
             
     print("broke")
     cv2.destroyAllWindows() # destroy all windows
@@ -35,11 +35,11 @@ if __name__ == "__main__":
     imgs_dir = Path.cwd()
     args = {}
     input_string='''Enter a letter key you want to use as a sort shortcut
-    (at least one required, leave blank to run function):'''
+    (at least one required, leave blank to run function): '''
     arg = input(input_string)
     while arg:
         key=arg
-        value=input("Enter the name of the directory to move images to when you press "+key)
+        value=input("Enter the name of the directory to move images to when you press "+key+": ")
         args[key] = value
         arg = input(input_string)
     img_sort(imgs_dir,**args)
